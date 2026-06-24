@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 import webbrowser
@@ -42,7 +43,10 @@ def get_item_prices(item_id: int) -> Tuple[Optional[int], Optional[int], Optiona
 
 def load_json_file(filepath: str) -> dict:
     """Load and return JSON file contents."""
-    with open(filepath, "r") as f:
+    # Construct the full path relative to the script path
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    full_path = os.path.join(script_dir, filepath)
+    with open(full_path, "r") as f:
         return json.load(f)
 
 
