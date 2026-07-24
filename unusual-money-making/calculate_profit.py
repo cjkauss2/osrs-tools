@@ -1,4 +1,5 @@
 import os
+import time
 import json
 import requests
 import webbrowser
@@ -180,10 +181,12 @@ def main():
             for material in result["material_details"]:
                 material_url = f"https://prices.runescape.wiki/osrs/item/{material['item_id']}"
                 webbrowser.open(material_url)
+                time.sleep(0.05)
 
             # Open product page
             product_url = f"{GE_PRICES_URL}/{result['product_id']}"
             webbrowser.open(product_url)
+            time.sleep(0.05)
         
         print("Done!")
         
