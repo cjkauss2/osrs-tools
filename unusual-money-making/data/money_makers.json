@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Oathplate chest",
+        "quantity_produced": 1,
+        "materials": [
+            {
+                "name": "Crushed infernal shale",
+                "quantity": 2520
+            },
+            {
+                "name": "Oathplate shards",
+                "quantity": 450
+            }
+        ],
+        "skill": "Smithing",
+        "xp_per_action": 30350,
+        "actions_per_hour": 4
+    }
+]
