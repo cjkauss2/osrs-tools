@@ -134,6 +134,7 @@ def main():
                 "product_name": product_name,
                 "product_id": product_id,
                 "product_high_price": product_high,
+                "quantity_produced": quantity_produced,
                 "profit_per_action": profit_per_action,
                 "profit_per_hour": profit_per_hour,
                 "xp_per_hour": xp_per_hour,
@@ -153,7 +154,7 @@ def main():
         print(f"\n{idx}. {result['product_name']} ({result['skill']})")
         print(f"   Profit/Hour: {result['profit_per_hour']:,.0f} gp/hr")
         print(f"   XP/Hour: {result['xp_per_hour']:,.0f} xp/hr")
-        print(f"   Product High Price (before tax): {material['quantity']} x {result['product_high_price']:,} gp = {material['quantity'] * result['product_high_price']:,} gp")
+        print(f"   Product High Price (before tax): {result['quantity_produced']} x {result['product_high_price']:,} gp = {result['quantity_produced'] * result['product_high_price']:,} gp")
         print("   Materials:")
         for material in result["material_details"]:
             print(f"      - {material['name']}: {material['quantity']} x {material['low_price']:,} gp = {material['quantity'] * material['low_price']:,} gp")
